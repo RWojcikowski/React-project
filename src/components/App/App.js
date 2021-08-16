@@ -6,6 +6,7 @@ import Creator from '../Creator/Creator';
 
 class App extends React.Component {
   state = {
+    // eslint-disable-next-line react/prop-types
     lists: this.props.lists || [],
   }
 
@@ -25,7 +26,7 @@ class App extends React.Component {
           <Creator text={settings.listCreatorText} action={title => this.addList(title)} />
         </div>
       </main>
-    )
+    );
   }
 
   addList(title) {
@@ -37,7 +38,7 @@ class App extends React.Component {
             key: state.lists.length ? state.lists[state.lists.length - 1].key + 1 : 0,
             title,
           },
-        ]
+        ],
       }
     ));
   }
